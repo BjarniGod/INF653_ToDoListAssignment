@@ -9,6 +9,6 @@
 <body>
     <main>
         <header>
-            <h1>Assignemnt Tracker</h1>
+            <h1>ToDo List</h1>
         </header>
     

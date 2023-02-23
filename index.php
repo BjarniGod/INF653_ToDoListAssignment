@@ -24,20 +24,20 @@ switch($action) {
 
     case "add_todo":
         if($title && $description) {
-        add_course($title, $description);
-        header("Location: .?action=list_courses");
+        add_todo($title, $description);
+        header("Location: .?action=list_todos");
         } else {
-            $error = "Invalid assignment data. Check all the fields and try again!";
+            $error_message = "Invalid assignment data. Check all the fields and try again!";
             include('view/error.php');
             exit();
         }
     
     case "delete_todo":
         if($item_number) {
-            delete_course($item_number);
+            delete_todo($item_number);
             header("Location: .?action=list_todos");
         } else {
-            $error = "Missing or incorrect item number!";
+            $error_message = "Missing or incorrect item number!";
             include('view/error.php');
         }
         break;
@@ -50,4 +50,7 @@ switch($action) {
         include('view/todo_list.php');
 }
 
+
+
 ?>
+
