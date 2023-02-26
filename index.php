@@ -3,8 +3,8 @@ require('model/database.php');
 require('model/todo_db.php');
 
 $item_number = filter_input(INPUT_POST, "item_number", FILTER_VALIDATE_INT);
-$title = filter_input(INPUT_POST, "item_number", FILTER_UNSAFE_RAW);
-$description = filter_input(INPUT_POST, "item_number", FILTER_UNSAFE_RAW);
+$title = filter_input(INPUT_POST, "title", FILTER_UNSAFE_RAW);
+$description = filter_input(INPUT_POST, "description", FILTER_UNSAFE_RAW);
 
 
 
